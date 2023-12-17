@@ -1,4 +1,8 @@
 
+import time
+import tracemalloc
+from graphviz import Digraph
+
 class Node:
     def __init__(self, next_hop = None):
         self.children = {}
@@ -120,4 +124,70 @@ def print_trie(node, indent=0):
         print('-' * indent + str(child) + next_hop_info)
         print_trie(node.children[child], indent + 4)
 
+def run():
+    root = Node()
+    stride = 2  # Default stride value
 
+    while True:
+        start_time = time.time()
+        tracemalloc.start() 
+
+        command = input("Enter command (Read File, Insert, Print, Lookup, Set Stride, Finish): ").strip().lower()
+
+        if command == 'finish':
+            end_time = time.time()  # End timing
+            print(f"Time taken: {end_time - start_time:.2f} seconds")
+            current, peak = tracemalloc.get_traced_memory()
+            print(f"Current memory usage: {current / 1024 / 1024:.2f} MB; Peak: {peak / 1024 / 1024:.2f} MB")
+            tracemalloc.stop()
+            break
+
+        elif command == 'read file':
+            file_name = input("Enter the file name: ")
+            try:
+                inputs = read_input(file_name)
+                organized_inputs = pre_process(inputs)
+                for length in range(0, 33):
+                    for prefix, length, next_hop in organized_inputs.get(length, []):
+                        insert(root, prefix, length, next_hop, stride)
+            except FileNotFoundError:
+                print(f"File not found: {file_name}")
+
+        elif command == 'insert':
+            try:
+                prefix, length, next_hop = map(int, input("Enter prefix, length, next_hop: ").split())
+                insert(root, prefix, length, next_hop, stride)
+            except ValueError:
+                print("Invalid input. Please enter three integers separated by spaces.")
+
+        elif command == 'print':
+            print_trie(root)
+
+        elif command == 'lookup':
+            try:
+                addr = int(input("Enter address to lookup (in hex): "), 16)
+                next_hop = lookup(root, addr, stride)
+                print(f"Next hop for {addr:0X}: {next_hop}")
+            except ValueError:
+                print("Invalid address format. Please enter a hexadecimal address.")
+
+        elif command == 'set configuration':
+            try:
+                new_stride = int(input("Enter new stride (2, 4, 8, etc.): "))
+                if new_stride > 0:
+                    stride = new_stride
+                    print(f"Stride set to {stride}")
+                else:
+                    print("Invalid stride value. Please enter a positive integer.")
+            except ValueError:
+                print("Invalid input. Please enter an integer.")
+
+        elif command == 'visualize':
+            g = visualize_trie(root)
+            g.render('trie_visualization', view=True, format='png')  # Saves and opens the visualization
+
+
+
+        
+
+run()
