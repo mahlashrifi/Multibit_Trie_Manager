@@ -61,13 +61,21 @@ def insert(root, stride, prefix, length, next_hop):
 
 
 
-def print_trie(root, indent=0):
-    for child in node.children:
-        next_hop_info = ' (Next hop: ' + str(node.children[child].next_hop) + ')' if node.children[child].next_hop is not None else ''
-        print('-' * indent + str(child) + next_hop_info)
-        print_trie(node.children[child], indent + 4)
 
 
+# Call the print_trie function after the trie has been constructed
+# ... (rest of your code)
+
+
+# Call the print_trie function after the trie has been constructed
+
+# inputs = read_input("prefix-list.txt")
+# organized_inputs = pre_process(inputs)
+# root = Node()
+# for length in range(0, 33):
+#     for prefix, length, next_hop in organized_inputs.get(length):
+#         insert(root, 2, prefix, length, next_hop)
+# print_trie(root)
     
 def lookup(root, addr, stride):
     current_node = root
@@ -89,5 +97,27 @@ def lookup(root, addr, stride):
 
     return last_next_hop
 
+
+def visualize_trie(node, graph=None, parent_name=None, edge_label=''):
+    if graph is None:
+        graph = Digraph(comment='Trie')
+
+    if parent_name is None:
+        parent_name = 'root'
+
+    for bit_pattern, child_node in node.children.items():
+        node_name = f'{parent_name}-{bit_pattern}'
+        graph.node(node_name, label=bit_pattern + (f'\n({child_node.next_hop})' if child_node.next_hop is not None else ''))
+        graph.edge(parent_name, node_name, label=edge_label)
+
+        visualize_trie(child_node, graph, node_name, bit_pattern)
+
+    return graph
+
+def print_trie(node, indent=0):
+    for child in node.children:
+        next_hop_info = ' (Next hop: ' + str(node.children[child].next_hop) + ')' if node.children[child].next_hop is not None else ''
+        print('-' * indent + str(child) + next_hop_info)
+        print_trie(node.children[child], indent + 4)
 
 
