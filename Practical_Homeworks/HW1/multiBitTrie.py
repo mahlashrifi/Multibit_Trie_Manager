@@ -1,9 +1,8 @@
 
 class Node:
-    def __init__(self, next_hob):
-        self.left = None
-        self.right = None
-        self.next_hob = next_hob
+    def __init__(self, next_hop = None):
+        self.children = {}
+        self.next_hop = next_hop
 
 def read_input(file_name):
     inputs = []
@@ -36,16 +35,39 @@ def pre_process(inputs):
     
     return length_dict
 
+# Convert integer to a 32-bit binary string
+def int_to_binary_str(prefix, max_length=32):
 
-# len_dict=pre_process(read_input("prefix-list.txt"))
-# for key in len_dict:
-#     print(f"***************{key}**************")
-#     for item in len_dict.get(key):
-#         print (f"item = {item}")
-# Your existing read_input function remains the same
+    return bin(prefix)[2:].zfill(max_length)
 
-# def insert(root, prefix, length, next_hob):
-#     return "khar"
+def insert(root, stride, prefix, length, next_hop):
+    current_node = root  
+    binary_prefix = int_to_binary_str(prefix)  
+
+    for i in range(0, length, stride):
+        # Extract the part of the prefix corresponding to the current stride
+        bit_pattern = binary_prefix[i:i+stride]
+        
+        # If there is no child for the bit pattern, create a new node
+        if bit_pattern not in current_node.children:
+            current_node.children[bit_pattern] = Node()
+        
+        current_node = current_node.children[bit_pattern]
+    
+        # If we have reached the end of the prefix, set the next hop
+        if i + stride >= length:
+            current_node.next_hop = next_hop
+            break
+
+inputs = read_input("prefix-list.txt")
+organized_inputs = pre_process(inputs)
+root = Node()
+for length in range(0, 33):
+    for prefix, length, next_hop in organized_inputs.get(length):
+        insert(root, 2, prefix, length, next_hop)
+
+
+def tprint(root):
 #
 #
 # def lookup(root, addr):
