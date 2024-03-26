@@ -1,0 +1,42 @@
+Bit pattern:  -> Next hop: 2
+Child bit pattern: 00
+    Bit pattern: 00 -> Next hop: 16
+    Child bit pattern: 01
+        Bit pattern: 0001 -> Next hop: 11
+    Child bit pattern: 10
+        Bit pattern: 0010 -> Next hop: 15
+    Child bit pattern: 11
+        Bit pattern: 0011 -> Next hop: 15
+Child bit pattern: 01
+    Bit pattern: 01 -> Next hop: 16
+    Child bit pattern: 00
+        Bit pattern: 0100 -> Next hop: 25
+    Child bit pattern: 01
+        Bit pattern: 0101 -> Next hop: 25
+        Child bit pattern: 00
+            Bit pattern: 010100 -> Next hop: 21
+        Child bit pattern: 01
+            Bit pattern: 010101 -> Next hop: 46
+    Child bit pattern: 10
+        Bit pattern: 0110 -> Next hop: 4
+    Child bit pattern: 11
+        Bit pattern: 0111 -> Next hop: 15
+Child bit pattern: 10
+    Bit pattern: 10 -> Next hop: 45
+    Child bit pattern: 01
+        Bit pattern: 1001 -> Next hop: 7
+    Child bit pattern: 11
+        Bit pattern: 1011 -> Next hop: 21
+Child bit pattern: 11
+    Child bit pattern: 00
+        Bit pattern: 1100 -> Next hop: 12
+    Child bit pattern: 01
+        Bit pattern: 1101 -> Next hop: 11
+        Child bit pattern: 00
+            Bit pattern: 110100 -> Next hop: 14
+        Child bit pattern: 01
+            Bit pattern: 110101 -> Next hop: 14
+        Child bit pattern: 10
+            Bit pattern: 110110 -> Next hop: 36
+        Child bit pattern: 11
+            Bit pattern: 110111 -> Next hop: 36

@@ -1,0 +1,77 @@
+Bit pattern:  -> Next hop: 2
+Child bit pattern: 0000
+    Bit pattern: 0000 -> Next hop: 16
+Child bit pattern: 0001
+    Bit pattern: 0001 -> Next hop: 11
+Child bit pattern: 0010
+    Bit pattern: 0010 -> Next hop: 15
+Child bit pattern: 0011
+    Bit pattern: 0011 -> Next hop: 15
+Child bit pattern: 0100
+    Bit pattern: 0100 -> Next hop: 25
+Child bit pattern: 0101
+    Bit pattern: 0101 -> Next hop: 25
+    Child bit pattern: 0000
+        Bit pattern: 01010000 -> Next hop: 21
+    Child bit pattern: 0001
+        Bit pattern: 01010001 -> Next hop: 21
+    Child bit pattern: 0010
+        Bit pattern: 01010010 -> Next hop: 21
+    Child bit pattern: 0011
+        Bit pattern: 01010011 -> Next hop: 21
+    Child bit pattern: 0100
+        Bit pattern: 01010100 -> Next hop: 46
+    Child bit pattern: 0101
+        Bit pattern: 01010101 -> Next hop: 46
+    Child bit pattern: 0110
+        Bit pattern: 01010110 -> Next hop: 46
+    Child bit pattern: 0111
+        Bit pattern: 01010111 -> Next hop: 46
+Child bit pattern: 0110
+    Bit pattern: 0110 -> Next hop: 4
+Child bit pattern: 0111
+    Bit pattern: 0111 -> Next hop: 15
+Child bit pattern: 1000
+    Bit pattern: 1000 -> Next hop: 45
+Child bit pattern: 1001
+    Bit pattern: 1001 -> Next hop: 7
+Child bit pattern: 1010
+    Bit pattern: 1010 -> Next hop: 45
+Child bit pattern: 1011
+    Bit pattern: 1011 -> Next hop: 21
+Child bit pattern: 1100
+    Bit pattern: 1100 -> Next hop: 12
+Child bit pattern: 1101
+    Bit pattern: 1101 -> Next hop: 11
+    Child bit pattern: 0000
+        Bit pattern: 11010000 -> Next hop: 14
+    Child bit pattern: 0001
+        Bit pattern: 11010001 -> Next hop: 14
+    Child bit pattern: 0010
+        Bit pattern: 11010010 -> Next hop: 14
+    Child bit pattern: 0011
+        Bit pattern: 11010011 -> Next hop: 14
+    Child bit pattern: 0100
+        Bit pattern: 11010100 -> Next hop: 14
+    Child bit pattern: 0101
+        Bit pattern: 11010101 -> Next hop: 14
+    Child bit pattern: 0110
+        Bit pattern: 11010110 -> Next hop: 14
+    Child bit pattern: 0111
+        Bit pattern: 11010111 -> Next hop: 14
+    Child bit pattern: 1000
+        Bit pattern: 11011000 -> Next hop: 36
+    Child bit pattern: 1001
+        Bit pattern: 11011001 -> Next hop: 36
+    Child bit pattern: 1010
+        Bit pattern: 11011010 -> Next hop: 36
+    Child bit pattern: 1011
+        Bit pattern: 11011011 -> Next hop: 36
+    Child bit pattern: 1100
+        Bit pattern: 11011100 -> Next hop: 36
+    Child bit pattern: 1101
+        Bit pattern: 11011101 -> Next hop: 36
+    Child bit pattern: 1110
+        Bit pattern: 11011110 -> Next hop: 36
+    Child bit pattern: 1111
+        Bit pattern: 11011111 -> Next hop: 36
