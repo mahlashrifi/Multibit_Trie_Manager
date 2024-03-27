@@ -56,8 +56,8 @@ Upon running the application, you will encounter the following menu:
 Results of trie creation and visualization for the project definition example with different strides:
 
 - ![Stride = 1](https://github.com/mahlashrifi/Multibit_Trie_Manager/blob/master/screen-shots/res-stride1.png)
-- ![Stride = 2](https://github.com/mahlashrifi/Multibit_Trie_Manager/blob/master/screen-shots/res-stride2.png))
-- ![Stride = 4](https://github.com/mahlashrifi/Multibit_Trie_Manager/blob/master/screen-shots/res-stride4.png))
-- ![Stride = 8](https://github.com/mahlashrifi/Multibit_Trie_Manager/blob/master/screen-shots/res-stride8.png))
+- ![Stride = 2](https://github.com/mahlashrifi/Multibit_Trie_Manager/blob/master/screen-shots/res-stride2.png)
+- ![Stride = 4](https://github.com/mahlashrifi/Multibit_Trie_Manager/blob/master/screen-shots/res-stride4.png)
+- ![Stride = 8](https://github.com/mahlashrifi/Multibit_Trie_Manager/blob/master/screen-shots/res-stride8.png)
 
 The printed result of this example exists in the Result folder.
