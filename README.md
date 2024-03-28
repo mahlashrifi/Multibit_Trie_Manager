@@ -10,7 +10,7 @@ The Multibit Trie revolutionizes IP address lookup with its efficient organizati
 **Multibit trie structure**
 
 
-The Multibit Trie is an advanced version of the binary trie, enabling each node to have more than two children based on the address bit division, known as the stride. For example, with a stride of 2, each node can accommodate up to 4 children. This structure results in a more compact trie. However, this advantage requires a more complex data structure for each child node. Examples of Multibit Trie with different strides can be found [here](#introduction)
+The Multibit Trie is an advanced version of the binary trie, enabling each node to have more than two children based on the address bit division, known as the stride. For example, with a stride of 2, each node can accommodate up to 4 children. This structure results in a more compact trie. However, this advantage requires a more complex data structure for each child node. Examples of Multibit Trie with different strides can be found [here](#screenshots)
 
 
 **Trie vs. Tree**
