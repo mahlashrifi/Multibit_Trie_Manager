@@ -1,11 +1,3 @@
-Introduction
-<details>
-<summary><strong>Why ip addrees lookup is important? </strong> (External API)</summary>
-An IP packet travels from the source to the destination by passing through a series of routers. In the routers, before the packet is forwarded, several tasks must be performed: updating the Time to Live (TTL) in the packet header, queuing the packets in different queues for different classes of service, and so on. However, the operation that takes up the most processing time for incoming packets is the lookup in a routing table to find the next hop information by matching the appropriate prefix with the destination address of the packet. Based on the network information it has and the destination address in the packet header, the router decides from which output port to send the packet. This routing information is stored in a table called the routing table within the router.
-Ip address lookup 
-</details>
-
-
 
 
 # Multibit Trie Manager
