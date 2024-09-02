@@ -1,6 +1,6 @@
 # Multibit Trie Manager
 
-This project is the first practical assignment for the Network Device Course at AUT, undertaken in Fall 2023. With this tool, you can efficiently create, visualize, update, and search within a multibit trie using various configurations.
+This project is the first project for the Network Device Course at AUT, undertaken in Fall 2023. With this tool, you can efficiently create, visualize, update, and search within a multibit trie using various configurations.
 
 
 ## Introduction
